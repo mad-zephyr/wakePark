@@ -1,0 +1,56 @@
+@use '../../global/_colors' as colors
+
+.menu
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 2
+	width: 100vw
+	height: 100vh
+	background: colors.$color-orange
+	top: 0
+	transform: translate(0%)
+	transition: 0.5s transform ease
+	&-open
+		transform: translateY(-100%)
+
+.menu__wrapper
+	display: flex
+	width: 100%
+	padding: 240px 0 0 180px
+	column-gap: 2rem
+	& > div
+		display: flex
+		flex-direction: column
+		flex-grow: 1
+		ul
+			li
+				list-style: none
+				margin-bottom: 24px
+
+.first
+	h2
+		font-weight: 300
+		line-height: 0.7
+		margin-bottom: 48px
+		&:target
+			font-weight: bold
+		&:hover
+			color: colors.$color-darkBlue
+				
+
+.second
+.third
+	h4
+		font-weight: 600
+
+.background__element
+	position: absolute
+	right: 0
+	bottom: 0
+	background: url('./assets/man.svg') center center/cover no-repeat
+	width: 630rem
+	height: 420rem
+	opacity: 0.5
+
+

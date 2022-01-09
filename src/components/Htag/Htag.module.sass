@@ -1,0 +1,43 @@
+@use '../../global/_colors' as color
+
+.h
+	font-family: Aeroport
+	font-style: normal
+	font-weight: bold
+	line-height: 1
+	color:  color.$color-black
+	white-space: pre-wrap
+
+.h1
+	font-size: 96px
+	text-transform: uppercase
+
+.h2 
+	font-size: 66px 
+
+.h3
+	position: relative
+	font-size: 48px
+	&::before
+		content: 'W'
+		position: absolute
+		bottom: 0
+		left: -60px
+		font-size: 166px
+		line-height: 120px
+		z-index: -1
+		opacity: 0.3
+	&__dark
+		color: color.$color-black
+		&::before
+			color: color.$color-white-light
+
+	&__light
+		color: color.$color-white
+		&::before
+			color: color.$color-yellow
+
+.h4
+	font-size: 30px
+	font-style: normal
+	font-weight: 300

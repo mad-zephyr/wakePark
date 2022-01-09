@@ -1,0 +1,41 @@
+@use '../../global/_colors.sass' as color
+
+.btn
+	display: flex
+	align-items: center
+
+	height: 72px
+	width: 306px
+	border-radius: 48px
+	column-gap: 6px
+	padding: 12px
+	&__yellow
+		border: 2px solid transparentize(color.$color-yellow, 0.7)
+	&__blue
+		border: 2px solid transparentize(color.$color-blue, 0.7)
+	&__white
+		border: 2px solid transparentize(color.$color-white, 0.7)
+
+.left
+	justify-content: flex-start
+	div:last-of-type
+		width: calc(100% - 56px)!important
+
+.center
+	justify-content: center
+
+.round
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 48px
+	height: 48px
+	border: 2px solid color.$color-white-light
+	border-radius: 50%
+
+.yellow
+	fill: color.$color-yellow
+.blue
+	fill: color.$color-blue
+.white
+	fill: color.$color-white

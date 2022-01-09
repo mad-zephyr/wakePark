@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState }  from 'react'
 
-function App() {
+import './global/styles.sass'
+import './fonts/fonts.sass'
+import Header from './page-component/header/header'
+
+import SideMenu from './page-component/side-menu/sideMenu'
+import HeroScreen from './page-component/hero-screen/HeroScreen'
+
+function App () {
+  const [open, setOpen] = useState(true)
+
+  const handlerMenuOpen = () => {
+    setOpen(!open)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <SideMenu state={open} />
+      <Header state={open} handlerMenuOpen={handlerMenuOpen} />
+      <HeroScreen/>
+    </>
+  )
 }
 
-export default App;
+export default App
