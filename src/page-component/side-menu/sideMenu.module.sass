@@ -4,15 +4,16 @@
 	position: absolute
 	top: 0
 	left: 0
-	z-index: 2
+	z-index: 100
 	width: 100vw
 	height: 100vh
 	background: colors.$color-orange
 	top: 0
-	transform: translate(0%)
+	transform-origin: top 
+	transform: translateY(0%)  
 	transition: 0.5s transform ease
 	&-open
-		transform: translateY(-100%)
+		transform: translateY(-100%) 
 
 .menu__wrapper
 	display: flex

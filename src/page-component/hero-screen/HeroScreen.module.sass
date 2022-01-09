@@ -1,0 +1,78 @@
+@use '../../global/_colors' as colors
+
+.hero
+  position: relative
+  width: 100vw
+  height: 100vh
+  max-height: 1080px
+  overflow-x: hidden
+
+.hero__wrapper
+  position: absolute
+  display: flex
+  flex-direction: column
+  row-gap: 24px
+  z-index: 3
+  padding: 240px 0 0 110px
+  height: 100vh
+  button
+    position: absolute
+    transition: 0.3s all ease
+    cursor: pointer
+    bottom: 120px
+    &::before, &::after
+      content: ''
+      position: absolute
+      height: 2px
+      background: transparentize(colors.$color-white, 0.8 ) 
+      width: 100vw
+    &::after
+      left: 304px
+    &::before
+      right: 304px
+    &:hover
+      background: transparentize(colors.$color-white, 0.9 ) 
+
+.hero__img
+  display: block
+  position: absolute
+  z-index: 2
+  right: 0
+  bottom: 0px
+  background: url('./assets/man.png') center center/cover no-repeat
+  width: 1000rem
+  height: 1000rem
+
+.descriptor
+  width: 460px
+  font-size: 24px
+  line-height: 24px
+  font-weight: 400
+  opacity: 0.8
+
+.overlay
+  position: absolute
+  top: 0
+  right: 330px
+  height: 100vh
+  width: 100vw
+  z-index: 1
+  background: rgba(3, 0, 19, 0.3)
+  backdrop-filter: blur(14px)
+  &::after
+    content: ''
+    position: absolute
+    right: -5px
+    bottom: 150px
+    display: block
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background: colors.$color-white
+
+.background
+  position: absolute
+  top: 0
+  background: url('./assets/main-bg.jpg') center center/cover no-repeat
+  width: 100vw
+  height: 100vh
