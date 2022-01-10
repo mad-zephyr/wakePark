@@ -20,7 +20,7 @@ function App () {
       <SideMenu state={open} />
       <Header state={open} handlerMenuOpen={handlerMenuOpen} />
       <HeroScreen/>
-      <SecondScreen/>
+      <SecondScreen title='Философия \n WAKEPARK.md'/>
     </>
   )
 }
