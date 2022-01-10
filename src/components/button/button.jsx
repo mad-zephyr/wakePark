@@ -10,7 +10,7 @@ import { ReactComponent as Call } from './assets/carbon_phone.svg'
 import styles from './button.module.sass'
 
 const Button = (props) => {
-  const { iconName, text, color, textSize, type, border } = props
+  const { iconName, text, color, textSize, type, border, fill } = props
 
   return (
     <button  
@@ -21,7 +21,7 @@ const Button = (props) => {
           [styles.btn__white]: border === 'white',
           [styles.left]: type === 'left',
           [styles.center]: type === 'center',
-
+          [styles.fill]: fill === true,
         }
       )}
     >
@@ -82,7 +82,8 @@ Button.propTypes = {
   color: PropTypes.string,
   textSize: PropTypes.string,
   type: PropTypes.string,
-  border: PropTypes.string
+  border: PropTypes.string,
+  fill: PropTypes.bool
 }
 
 export default Button

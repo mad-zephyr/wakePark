@@ -12,6 +12,7 @@ const P = (props) => {
       [styles.l]: textSize === 'l',
       [styles.m]: textSize === 'm',
       [styles.s]: textSize === 's',
+
       [styles.p__yellow]: color === 'yellow',
       [styles.p__blue]: color === 'blue',
       [styles.p__white]: color === 'white'
