@@ -19,7 +19,7 @@ const SecondScreen = () => {
         
         <div className={styles.section__right}>
           <div className={styles.section__wrapper}>
-            <Htag tag='h3' type='dark' text={'Философия \n WAKEPARK.md'}/>
+            <Htag tag='h3' type='pre-dark' color='dark' text={'Философия \n WAKEPARK.md'}/>
             <P textSize='m' text={descr}/>
             <Button iconName='calendar' text='Забронировать' fill color='blue'/>
           </div>

@@ -23,6 +23,8 @@ function App () {
       <HeroScreen/>
       <SecondScreen title='Философия \n WAKEPARK.md'/>
       <ThirdScreen /> 
+      {/* <SecondScreen title='Философия \n WAKEPARK.md'/> */}
+      <section style={{fontSize:'60px'}}> Work in progress</section>
     </>
   )
 }

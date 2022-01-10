@@ -14,7 +14,7 @@ const HeroScreen = () => {
 
       <div className="container">
         <div className={styles.hero__wrapper}>
-          <Htag tag='h1' color='white' type='light' text={'WAKE days\nARE GOOD DAYS'}/>
+          <Htag tag='h1' color='light'  type='light' text={'WAKE days\nARE GOOD DAYS'}/>
           <P color='yellow' text='#WAKEPARKMD'/>
 
           <div className={styles.descriptor}>

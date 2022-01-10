@@ -6,38 +6,53 @@
 	font-weight: bold
 	line-height: 1
 	color:  color.$color-black
-	white-space: pre-wrap
+	white-space: pre-line
+	z-index: 2
+	&__light
+		color: color.$color-white
 
 .h1
 	font-size: 96px
 	text-transform: uppercase
 	line-height: 1
-	white-space: pre-line
 
 .h2 
 	font-size: 66px 
-	white-space: pre-wrap
 
 .h3
 	position: relative
 	font-size: 48px
-	&::before
-		content: 'W'
+	&::before 
 		position: absolute
 		bottom: 0
 		left: -60px
 		font-size: 166px
 		line-height: 120px
 		z-index: -1
-	&__dark
-		color: color.$color-black
-		&::before
-			color: color.$color-yellow
 
-	&__light
-		color: color.$color-white
-		&::before
-			color: color.$color-yellow
+.h3__light
+	color: color.$color-yellow
+
+.h3__dark
+	color: color.$color-black
+
+.white
+	color: color.$color-white
+
+.light__pre
+	&::before
+		content: 'W'
+		color: transparentize(color.$color-white, 0.8)
+.dark__pre
+	&::before
+		content: 'W'
+		color: color.$color-yellow
+
+.light
+	font-weight: 300
+
+.bold
+	font-weight: 600
 
 .h4
 	font-size: 30px
