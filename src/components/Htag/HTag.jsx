@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 
 const Htag = (props) => {
   const {tag, text, type} = props
-  console.log(props)
 
   switch (tag) {
   case 'h1':

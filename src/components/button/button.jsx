@@ -11,7 +11,6 @@ import styles from './button.module.sass'
 
 const Button = (props) => {
   const { iconName, text, color, textSize, type, border } = props
-  console.log(props)
 
   return (
     <button  
