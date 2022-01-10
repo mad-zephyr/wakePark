@@ -1,5 +1,26 @@
+@use '../../global/_colors' as colors
+
 .section
-	height: 100vh
+	position: relative
+	height: 600px
 	background: grey
 	color: black
 	font-size: 30px
+	&__left
+		position: absolute
+		width: 50vw
+		height: 600px
+		right: 50%
+		img
+			object-fit: cover
+			width: 50vw
+			height: 600px
+	&__right
+		position: absolute
+		left: 50%
+		top: -48px
+		width: 50vw
+		height: calc( 100% + 48px * 2 )
+		background: colors.$color-white
+		z-index: 2
+		border-radius: 48px 0 0 48px
