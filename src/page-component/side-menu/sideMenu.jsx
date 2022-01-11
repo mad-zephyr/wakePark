@@ -17,7 +17,7 @@ const SideMenu = ({state}) => {
     {links.first.map((links, index) => {
       return <li id={links} key={links+index}>
         <Href  target={`${links}#${links}`}>
-          <Htag text={links} tag='h2'/>
+          <Htag tag='h2' text={links}/>
         </Href> 
       </li>
     })}

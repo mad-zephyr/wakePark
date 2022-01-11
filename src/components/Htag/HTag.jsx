@@ -45,7 +45,7 @@ Htag.propTypes = {
   type: PropTypes.string,
   color: PropTypes.string,
   text: PropTypes.string,
-  fontWeight: PropTypes.string,
+  fontWeight: PropTypes.number,
 }
 
 export default Htag

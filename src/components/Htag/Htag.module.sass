@@ -20,7 +20,10 @@
 	font-size: 66px 
 
 .h3
+	display: flex
 	position: relative
+	align-items: center
+	height: min-content
 	font-size: 48px
 	&::before 
 		position: absolute
@@ -29,11 +32,13 @@
 		font-size: 166px
 		line-height: 120px
 		z-index: -1
+		pointer-events: none
 
 .h3__light
 	color: color.$color-yellow
 
 .h3__dark
+	
 	color: color.$color-black
 
 .white

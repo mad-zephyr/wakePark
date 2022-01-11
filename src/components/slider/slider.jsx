@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import cn from 'classnames'
 
 import { ReactComponent as Right } from './assets/bi_arrow-left.svg'
 import { ReactComponent as Left } from './assets/bi_arrow-right.svg'
@@ -11,9 +12,9 @@ import P from '../../components/p/p'
 
 const data = [
   {id: 1, img: bgImg, title: 'Вейкборд', descr: 'То, ради чего и появилось наше место. Отличная альтернатива для сноубордистов и крутейший летний вид спорта для каждого! Вейкборд не только...'},
-  {id: 2, img: bgImg, title: 'Вейкборд', descr: 'То, ради чего и появилось наше место. Отличная альтернатива для сноубордистов и крутейший летний вид спорта для каждого! Вейкборд не только...'},
-  {id: 3, img: bgImg, title: 'Вейкборд', descr: 'То, ради чего и появилось наше место. Отличная альтернатива для сноубордистов и крутейший летний вид спорта для каждого! Вейкборд не только...'},
-  {id: 4, img: bgImg, title: 'Вейкборд', descr: 'То, ради чего и появилось наше место. Отличная альтернатива для сноубордистов и крутейший летний вид спорта для каждого! Вейкборд не только...'},
+  {id: 2, img: bgImg, title: 'Вейкскейт', descr: 'То, ради чего и появилось наше место. Отличная альтернатива для сноубордистов и крутейший летний вид спорта для каждого! Вейкборд не только...'},
+  {id: 3, img: bgImg, title: 'Водные лыжи', descr: 'То, ради чего и появилось наше место. Отличная альтернатива для сноубордистов и крутейший летний вид спорта для каждого! Вейкборд не только...'},
+  {id: 4, img: bgImg, title: 'SUP Surf', descr: 'Сапсёрфинг (от SUP — англ. Standup paddleboarding; — водный вид спорта, разновидность сёрфинга, в котором серфер, стоя на доске, катается на волнах и при этом гребет веслом, а не руками, как в классическом серфинге....'},
 ]
 
 const Slider = () => {
@@ -22,14 +23,10 @@ const Slider = () => {
   const descriptTrack = useRef(null)
 
   const onClickLeftArrow = () => {
-    console.log(imageTrack.current)
-
     setSliderPos(prevPos => {
-      if (prevPos === 0 ) {
-        prevPos = data.length - 1
-        return prevPos
-      }
-      return (prevPos -= 1)
+      return prevPos === 0 
+        ? (data.length - 1)
+        : (prevPos -= 1)
     })
   }
 
@@ -54,7 +51,15 @@ const Slider = () => {
       <P textSize='m' color='white' text={elem.descr}/> 
     </div>
   ) )
-  const navDots = data.map((elem, index) => <span key={elem.id} className={styles.nav__dot} onClick={() => onClickDot(index)}> </span>)
+  const navDots = data.map((elem, index) => (
+    <span 
+      key={elem.id} 
+      className={cn(styles.nav__dot, {
+        [styles.nav__dot_active]: sliderPos + 1 === elem.id
+      })} 
+      onClick={() => onClickDot(index)}>
+    </span>
+  ))
 
 
   return(

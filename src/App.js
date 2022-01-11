@@ -8,6 +8,8 @@ import SideMenu from './page-component/side-menu/sideMenu'
 import HeroScreen from './page-component/hero-screen/HeroScreen'
 import SecondScreen from './page-component/second-screen/secondScreen'
 import ThirdScreen from './page-component/third-screen/thirdScreen'
+import './global/styles.sass'
+import FourthScreen from './page-component/fourth-screen/fourthScreen'
 
 function App () {
   const [open, setOpen] = useState(true)
@@ -23,8 +25,8 @@ function App () {
       <HeroScreen/>
       <SecondScreen title='Философия \n WAKEPARK.md'/>
       <ThirdScreen /> 
-      {/* <SecondScreen title='Философия \n WAKEPARK.md'/> */}
-      <section style={{fontSize:'60px'}}> Work in progress</section>
+      <FourthScreen />
+      <ThirdScreen /> 
     </>
   )
 }

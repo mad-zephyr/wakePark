@@ -16,7 +16,7 @@ const Href = (props) => {
 Href.propTypes = {
   target: PropTypes.string,
   text: PropTypes.string,
-  children: PropTypes.element
+  children: PropTypes.any
 }
 
 export default Href
