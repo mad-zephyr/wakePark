@@ -5,7 +5,7 @@ import Htag from '../../components/Htag/HTag'
 import Slider from '../../components/slider/slider'
 
 const ThirdScreen = () => {
-
+  
   return(
     <section className={styles.section}> 
       <div className={styles.container}>
