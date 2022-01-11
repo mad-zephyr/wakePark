@@ -21,7 +21,7 @@ const Header = ({handlerMenuOpen, state}) => {
   return (
     <> 
       <nav className={styles.header}>
-        <div className="container">
+        <div className={styles.container}>
           <div className={styles.main}>
             <div className={styles.logo}>
               <Href target='/'>

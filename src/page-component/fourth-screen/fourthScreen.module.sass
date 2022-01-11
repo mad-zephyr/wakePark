@@ -1,8 +1,12 @@
-
 .section
 	position: relative
 	height: 600px
 	font-size: 24px
+	.container
+		display: flex
+		max-width: 1300px
+		margin: 0 auto
+		height: stretch
 	&::before, &::after
 		content: ''
 		position: absolute
@@ -17,4 +21,17 @@
 		z-index: 2
 		background: url('./assets/wave-border-bottom.svg')
 		transform: rotateX(180deg)
-		
+	&__img
+		position: absolute
+		top: -18px
+		width: 400rem
+		left: 300rem
+		opacity: 0.3
+	&__left
+		display: flex
+		width: 50%
+		height: stretch
+		align-items: center 
+	&__right
+		height: stretch
+		width: 50%

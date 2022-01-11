@@ -7,18 +7,22 @@
 	background: none
 
 html
-	overscroll-behavior: none
-	scroll-behavior: smooth
-	scroll-padding-top: 3rem
 	font-size: calc(100vw / 1920 )
 	&::-webkit-scrollbar
 		width: 0
 		background: transparent
 
+body
+	overscroll-behavior: none
+	scroll-behavior: smooth
+	scroll-padding-top: 3rem
+
 .container
+	display: flex
 	position: relative
 	margin: 0 auto
 	padding: 0 40px
+	padding-left: 110px
 	height: 100%
 	width: stretch
 	max-width: 1380px

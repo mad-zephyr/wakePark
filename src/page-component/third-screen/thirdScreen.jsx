@@ -9,7 +9,7 @@ const ThirdScreen = () => {
   
   return(
     <section className={styles.section}> 
-      <div className={styles.container}>
+      <div className='container'>
         <div className={styles.section__left}>
           <Htag tag='h3' type='pre-light' color='light' text={'Услуги\nнашего парка'}/>
           <Href target='/services' text='Показать все услуги'/>
