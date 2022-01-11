@@ -1,0 +1,25 @@
+.slider
+	display: flex
+	width: 600px
+	&__wrapper
+		display: flex
+		column-gap: 24px
+	&__wrapper-image
+		overflow: hidden 
+		width: 196px
+		height: 196px
+		img
+			border-radius: 48px
+			width: 196px
+			height: 196px
+	&__description
+		display: flex
+		flex-direction: column
+		row-gap: 24px
+		width: calc(600px - 196px)
+		height: 200px
+		overflow-y: hidden
+		&-text
+			display: flex
+			flex-direction: column
+			row-gap: 24px
