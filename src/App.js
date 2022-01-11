@@ -11,6 +11,12 @@ import ThirdScreen from './page-component/third-screen/thirdScreen'
 import './global/styles.sass'
 import FourthScreen from './page-component/fourth-screen/fourthScreen'
 
+import mainBg from './assets/main-bg.jpg'
+import secondBg from './assets/secondBg.jpg'
+const btnName='Посмотреть видео презентацию нашего вейкпарка'
+const desqText = 'Мы всегда рядом с теми, кто объединяется ради любви к спорту, здоровому образу жизни и активному отдыху всей семьей.'
+
+
 function App () {
   const [open, setOpen] = useState(true)
 
@@ -22,11 +28,25 @@ function App () {
     <>
       <SideMenu state={open} />
       <Header state={open} handlerMenuOpen={handlerMenuOpen} />
-      <HeroScreen/>
+      <HeroScreen 
+        buttonIcon={'play'} 
+        buttonText={btnName} 
+        titleText={'WAKE days\nARE GOOD DAYS'} 
+        diez='#WAKEPARKMD'  
+        desqText={desqText} 
+        hero
+        backGround={mainBg}
+      />
       <SecondScreen title='Философия \n WAKEPARK.md'/>
       <ThirdScreen /> 
-      <FourthScreen />
-      <ThirdScreen /> 
+      <FourthScreen /> 
+      <HeroScreen
+        backGround={secondBg}
+        titleText={'САМЫЕ КРУТЫЕ\nКОРПОРАТИВЫ'} 
+        buttonIcon={'call'}
+        buttonText={'Связаться с нашими Event-менеджерами'} 
+        desqText={'Мы обожаем праздники! Поэтому наша команда с радостью устроит Вам незабываемый день по любому поводу, от Дня Рождения до рабочего корпоратива.'}
+      />
     </>
   )
 }
