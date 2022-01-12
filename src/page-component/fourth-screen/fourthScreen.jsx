@@ -1,4 +1,5 @@
 import React from 'react'
+import SuperEllipse from 'react-superellipse'
 import Htag from '../../components/Htag/HTag'
 import styles from './fourthScreen.module.sass'
 
@@ -23,10 +24,15 @@ const FourthScreen = () => {
   const sliderFace = data.map(person => (
 
     <div key={person.id} className={styles.person}>
-
-      <img src={person.img} alt={person.name} srcSet={person.img} />
-      <P textSize='s' text={person.name}/>
-      <P textSize='s' text={person.job}/>
+      <SuperEllipse 
+        className={styles.person__face} 
+        r1={0.0586} 
+        r2={0.332} 
+        style={{width: 196, height: 196, background: `url(${person.img}) center center/cover no-repeat`, objectFit: 'cover'}} 
+      />
+       
+      <P center textSize='m' text={person.name}/>
+      <P center textSize='s' text={person.job}/>
   
     </div>
   ))

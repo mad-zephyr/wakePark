@@ -4,7 +4,7 @@ import styles from './Htag.module.sass'
 import PropTypes from 'prop-types'
 
 const Htag = (props) => {
-  const {tag, text, color, type, fontWeight } = props
+  const {tag, text, color, type, fontWeight, center } = props
 
   switch (tag) {
   case 'h1':
@@ -23,6 +23,7 @@ const Htag = (props) => {
       [styles.white]: color === 'white',
       [styles.light__pre]: type === 'pre-light',
       [styles.dark__pre]: type === 'pre-dark',
+      [styles.center]: center === true,
       [styles.light]: fontWeight === 300,
       [styles.bold]: fontWeight === 600
     })}> {text} </h3>
@@ -36,15 +37,19 @@ const Htag = (props) => {
 }
 
 Htag.defaultProps = {
+  tag: 'h3',
   type: 'dark',
+  text: 'Default Text',
   fontWeight: 600
 }
 
 Htag.propTypes = {
-  tag: PropTypes.string.isRequired,
-  type: PropTypes.string,
   color: PropTypes.string,
+  center: PropTypes.bool,
+  tag: PropTypes.string,
+  type: PropTypes.string,
   text: PropTypes.string,
+
   fontWeight: PropTypes.number,
 }
 

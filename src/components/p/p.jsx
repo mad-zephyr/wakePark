@@ -6,12 +6,13 @@ import styles from './p.module.sass'
 import '../../global/_colors.sass'
 
 const P = (props) => {
-  const { text, textSize, color } = props
+  const { text, textSize, color, center } = props
   return (
     <div className={cn(styles.p, {
       [styles.l]: textSize === 'l',
       [styles.m]: textSize === 'm',
       [styles.s]: textSize === 's',
+      [styles.center]: center == true,
 
       [styles.p__yellow]: color === 'yellow',
       [styles.p__blue]: color === 'blue',
@@ -33,7 +34,8 @@ P.defaultProps = {
 P.propTypes = {
   text: PropTypes.string,
   textSize: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  center: PropTypes.bool
 }
 
 export default P
