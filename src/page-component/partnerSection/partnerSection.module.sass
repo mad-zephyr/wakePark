@@ -5,6 +5,7 @@
   min-height: 600px
   height: stretch
   padding: 150px 0 
+  z-index: 12
   &::before, &::after
     content: ''
     position: absolute
@@ -16,7 +17,7 @@
     background: url('./assets/wave-border-bottom.svg')
   &::after
     bottom: -23px
-    z-index: 2
+    z-index: 6
     background: url('./assets/wave-border-bottom.svg')
     transform: rotateX(180deg)
   &__left
@@ -38,8 +39,8 @@
   display: block
   position: absolute
   background: url('./assets/shillouette-white.png') center center/cover no-repeat
-  bottom: -10px
-  z-index: 4
+  bottom: -0px
+  z-index: 6
   mix-blend-mode: multiply
   right: 0
   width: 55px
