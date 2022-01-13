@@ -60,7 +60,7 @@ const Slider = () => {
   const sliderImages = data.map(elem => (
     <div key={elem.id} 
       className={styles.slider__slide} 
-      style={{transform: `translateY(-${(sliderPos ) * 208}px)`}} 
+      style={{transform: `translateY(-${(sliderPos ) * 220}px)`}} 
     >
 
       <img src={elem.img} alt="wakeman"  srcSet={elem.img}/>
