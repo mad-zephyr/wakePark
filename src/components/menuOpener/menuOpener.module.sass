@@ -13,14 +13,13 @@
 		width: 100%
 		height: 3px
 		border-radius: 5px
+		color: colors.$color-black
 		background: transparentize(colors.$color-white, 0.5)
 		transition: 0.3s all ease
 	&__open
-		div 
-			&:last-of-type
-				width: 50%
-	&__close
 		div
+			&:nth-of-type(1) 
+				color: colors.$color-orange
 			background: transparentize(colors.$color-black, 0)
 			&:first-of-type
 				transform: rotateZ(45deg) translate(6px, 15px)
@@ -29,5 +28,10 @@
 			&:last-of-type
 				width: 100%
 				transform: rotateZ(-45deg) translate(0px, -10px)
+		
+	&__close
+		div 
+			&:last-of-type
+				width: 50%
 
 

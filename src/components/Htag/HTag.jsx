@@ -14,15 +14,20 @@ const Htag = (props) => {
     })} >{text}</h1>
 
   case 'h2':
-    return <h2 className={cn(styles.h, styles.h2)} >{text}</h2>
+    return <h2 className={cn(styles.h, styles.h2, {
+      [styles.h__dark]: color === 'dark',
+      [styles.h__light]: color === 'light',
+    })}>{text}</h2>
 
   case 'h3':
     return <h3 className={cn(styles.h, styles.h3, {
-      [styles.h3__dark]: color === 'dark',
-      [styles.h3__light]: color === 'light',
+      [styles.h__dark]: color === 'dark',
+      [styles.h__yellow]: color === 'yellow',
+
       [styles.white]: color === 'white',
       [styles.light__pre]: type === 'pre-light',
       [styles.dark__pre]: type === 'pre-dark',
+
       [styles.center]: center === true,
       [styles.light]: fontWeight === 300,
       [styles.bold]: fontWeight === 600

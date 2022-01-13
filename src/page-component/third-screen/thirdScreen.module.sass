@@ -1,15 +1,16 @@
 @use '../../global/_colors' as color
 
+
 .section
 	display: flex
 	align-items: center
-	justify-content: space-between
 	position: relative 
 	min-height: 600px
+	width: 100vw
 	font-size: 40px
 	background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 103.39%),  url('./assets/bg.jpg') center center/cover no-repeat
 	object-fit: cover
-
+	z-index: -1
 	&__left
 		display: flex
 		flex-direction: column
@@ -37,4 +38,15 @@
 		height: min-content
  
 
-
+@media (max-width: 425px)
+	.container
+		flex-direction: column
+		row-gap: 36px
+	.section
+		padding: 60px 0px 80px
+		&__left
+			width: 100%
+			a
+				display: none
+		&__right
+			width: 100%

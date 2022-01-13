@@ -1,4 +1,6 @@
 import React from 'react'
+
+import cn from 'classnames'
 import SuperEllipse from 'react-superellipse'
 import Htag from '../../components/Htag/HTag'
 import styles from './fourthScreen.module.sass'
@@ -41,7 +43,7 @@ const FourthScreen = () => {
     <section className={styles.section}>
       <img className={styles.shillouete__black} src={shilloueteBlack} alt='wakePark' srcSet={shilloueteBlack} />
       <img className={styles.shillouete__white} src={shilloueteWhite} alt='wakePark' srcSet={shilloueteWhite} />
-      <div className="container">
+      <div className={cn('container', styles.container)}>
         <div className={styles.section__left}>
           <Htag 
             tag='h3' 

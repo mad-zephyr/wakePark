@@ -16,7 +16,8 @@ const P = (props) => {
 
       [styles.p__yellow]: color === 'yellow',
       [styles.p__blue]: color === 'blue',
-      [styles.p__white]: color === 'white'
+      [styles.p__white]: color === 'white',
+      [styles.p__orange]: color === 'orange'
     })}
     >
       {text}

@@ -1,12 +1,9 @@
+.container
+  padding-left: 110px
 .section
   position: relative
   height: 600px
   font-size: 24px
-  .container
-    display: flex
-    max-width: 1300px
-    margin: 0 auto
-    height: stretch
   &::before, &::after
     content: ''
     position: absolute
@@ -18,7 +15,7 @@
     background: url('./assets/wave-border-bottom.svg')
   &::after
     bottom: -23px
-    z-index: 2
+    z-index: 20
     background: url('./assets/wave-border-bottom.svg')
     transform: rotateX(180deg)
   &__img
@@ -29,8 +26,7 @@
     opacity: 0.3
   &__left
     display: flex
-    width: 50%
-    height: stretch
+    width: calc(50% - 110px)
     align-items: center 
   &__right
     display: flex
@@ -63,3 +59,48 @@
   bottom: -10px
   z-index: 3
   mix-blend-mode: multiply
+
+@media (max-width: 425px)
+  .container
+    display: flex
+    flex-direction: column
+    row-gap: 36px
+    padding: 0
+    padding: 50px 0px 0
+  .section
+    height: auto
+    padding-bottom: 36px
+    z-index: 28
+    &::after
+      bottom: -23px
+      z-index: -1
+      width: 100vw
+      background: url('./assets/Ellipse.svg') no-repeat
+      transform: rotateX(180deg)
+    &__left
+      display: flex
+      width: 100%
+      align-items: center 
+      padding-left: 24px
+    &__right
+      display: flex
+      align-items: center
+      justify-content: center
+      height: auto
+      width: 100vw
+    &__img
+      width: 200rem
+      left: 50%
+  .person
+    width: 100%
+    &__block
+      overflow-x: scroll
+      padding: 0 24px 12px
+    
+  .shillouete__black 
+    top: -50px 
+    width: 60rem
+    mix-blend-mode: screen
+
+  .shillouete__white
+    display: none 

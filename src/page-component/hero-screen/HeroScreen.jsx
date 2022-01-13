@@ -9,14 +9,15 @@ import P from '../../components/p/p'
 
 
 const HeroScreen = (props) => {
-  const {buttonIcon, buttonText, titleText, diez, desqText, hero, backGround } = props
+  const {buttonIcon, children, buttonText, titleText, diez, desqText, hero, backGround } = props
 
   return(
-    <section className={styles.hero}>
+    <section className={styles.section}>
 
       <div className="container">
-        <div className={styles.hero__wrapper}>
-          <Htag tag='h1' color='light' type='light' text={titleText}/>
+        <div className={styles.section__wrapper}>
+          {children}
+          {titleText && <Htag tag='h1' color='light' type='light' text={titleText}/>}
           {diez && <P color='yellow' text={diez}/>}
 
           <div className={styles.descriptor}>
@@ -24,11 +25,12 @@ const HeroScreen = (props) => {
           </div>
 
           <Button type='left' iconName={buttonIcon} color='yellow' textSize='s' text={buttonText}/>
+          <Button type='center' iconName='calendar' color='yellow' textSize='l' text='Забронировать'/>
         </div>
         
         <div className={styles.overlay}/>
       </div>
-      {hero && <div className={styles.hero__img}/>}
+      {hero && <div className={styles.section__img}/>}
       <img className={styles.background} src={backGround} alt="bacground" srcSet={backGround} />
     </section>
   )
@@ -42,6 +44,7 @@ HeroScreen.propTypes = {
   diez: PropTypes.string,
   backGround: PropTypes.string,
   hero: PropTypes.bool,
+  children: PropTypes.element,
 }
 
 export default HeroScreen

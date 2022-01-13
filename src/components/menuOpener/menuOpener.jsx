@@ -6,7 +6,8 @@ import styles from './menuOpener.module.sass'
 const MenuOpener = ({handler, state}) => {
 
   return (
-    <div onClick={() => handler()} className={cn(styles.menu, state ? styles.menu__open : styles.menu__close)}>
+    <div onClick={() => handler()} 
+      className={cn(styles.menu, state ? styles.menu__close : styles.menu__open)}>
       <div/>
       <div/>
       <div/>

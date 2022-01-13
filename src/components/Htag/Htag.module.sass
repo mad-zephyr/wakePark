@@ -34,11 +34,13 @@
 		z-index: -1
 		pointer-events: none
 
-.h3__light
+.h__white
+	color: color.$color-white
+
+.h__yellow
 	color: color.$color-yellow
 
-.h3__dark
-	
+.h__dark
 	color: color.$color-black
 
 .white
@@ -67,3 +69,17 @@
 .center
 	justify-content: center
 	width: 100%
+
+@media ( max-width: 425px )
+	.h1
+		font-size: 60px 
+	.h2 
+		font-size: 40px 
+	.h3
+		font-size: 30px
+		&::before 
+			position: absolute
+			bottom: -20px
+			left: -40px
+			font-size: 130px
+			line-height: 100%

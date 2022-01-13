@@ -5,16 +5,22 @@
 	width: 600px
 	&__wrapper
 		display: flex
+		flex-direction: column
+		height: 196px
 		column-gap: 24px
 		overflow: hidden
-	&__wrapper-image 
-		width: 196px
+	&__slide
+		display: flex
+		column-gap: 24px
 		height: 196px
+		width: max-content
+		width: 100%
 		transition: 0.3s transform ease
 		img
 			border-radius: 48px
 			width: 196px
 			height: 196px
+		
 	&__description
 		display: flex
 		flex-direction: column
@@ -28,18 +34,11 @@
 			row-gap: 24px
 	&__control
 		display: flex
-		&-arrow
+		&-arrows
 			display: flex
 			justify-content: center
 			align-items: center
 			width: 196px
-		&-nav
-			display: flex
-			width: calc(600px - 196px - 24px)
-			align-items: center
-			justify-content: center
-			font-size: 12px
-			column-gap: 4px
 		&-left
 			display: flex
 			cursor: pointer
@@ -47,6 +46,13 @@
 			display: flex
 			cursor: pointer
 			height: min-content
+		&-nav
+			display: flex
+			width: calc(600px - 196px - 24px)
+			align-items: center
+			justify-content: center
+			font-size: 12px
+			column-gap: 4px
 
 .nav__dot
 	display: block
@@ -64,3 +70,33 @@
 		background: transparentize(colors.$color-white, 0)
 
 
+@media (max-width: 425px)
+	.slider
+		width: 100%
+		&__wrapper
+			flex-direction: row
+			flex-wrap: wrap
+			column-gap: 12px
+			row-gap: 36px
+			overflow: initial
+			height: auto
+		&__control
+			display: none
+		&__description
+			&-text
+				align-items: center
+				text-align: center
+				h3
+					font-size: 20px
+				div
+					display: none
+		&__slide
+			flex-direction: column
+			height: auto
+			row-gap: 12px
+			width: calc( 50% - 6px )
+			img
+				border-radius: 40px
+				width: 100%
+				height: auto
+				box-shadow:  inset 0px 2px 6px #FFFFFF, inset 0px 11px 14px 5px rgba(255, 255, 255, 0.65), 0px 24px 34px -10px rgba(0, 0, 0, 0.45),

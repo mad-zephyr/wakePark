@@ -41,7 +41,7 @@ const SideMenu = ({state}) => {
   </ul>
 
   return (
-    <div className={cn(styles.menu, state && styles['menu-open'])}>
+    <div className={cn(styles.menu, state && styles['menu-close'])}>
       <div className="container">
         <div className={styles.menu__wrapper}>
           <div className={styles.first}>

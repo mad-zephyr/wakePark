@@ -4,16 +4,15 @@
 	position: fixed
 	top: 0
 	left: 0
-	z-index: 100
+	z-index: 29
 	width: 100vw
 	height: 100vh
-	background: colors.$color-orange
-	top: 0
 	transform-origin: top 
 	transform: translateY(0%)  
 	transition: 0.5s transform ease
 	overflow-y: hidden
-	&-open
+	background: colors.$color-orange 
+	&-close
 		transform: translateY(-100%)
 
 .menu__wrapper
@@ -29,13 +28,16 @@
 		ul
 			li
 				list-style: none
-				margin-bottom: 24px
-
 
 .first
 	a:local-link
 		font-weight: bold
 		color: colors.$color-white
+	ul
+		li
+			list-style: none
+			margin-bottom: 24px
+
 
 	h2
 		font-weight: 300
@@ -43,12 +45,19 @@
 		margin-bottom: 48px
 		&:hover
 			color: colors.$color-darkBlue
-				
 
 .second
+	ul
+		li
+			list-style: none
+			margin-bottom: 24px
 .third
 	h4
 		font-weight: 600
+	ul
+		li
+			list-style: none
+			margin-bottom: 24px
 
 .background__element
 	position: absolute
@@ -59,4 +68,34 @@
 	height: 420rem
 	opacity: 0.5
 
+@media (max-width: 425px)
+	.menu
 
+	.menu__wrapper
+		padding-top: 120px
+		padding-bottom: 24px
+		flex-direction: column 
+		row-gap: 36px
+		& > div
+			flex-grow: 0
+
+	.first
+		h2 
+			margin-bottom: 0px
+		ul
+			li
+				&:not(:last-of-type)
+					margin-bottom: 24px
+				&:last-of-type
+					margin-bottom: 0
+	.second
+		ul
+			li
+				&:not(:last-of-type)
+					margin-bottom: 16px
+				&:last-of-type
+					margin-bottom: 0
+
+	.background__element
+		display: none
+				

@@ -1,4 +1,5 @@
 import React from 'react'
+import cn from 'classnames'
 import styles from './thirdScreen.module.sass'
 import Href from '../../components/Href/Href'
 
@@ -9,12 +10,12 @@ const ThirdScreen = () => {
   
   return(
     <section className={styles.section}> 
-      <div className='container'>
+      <div className={cn('container', styles.container)}>
         <div className={styles.section__left}>
           <Htag 
             tag='h3' 
             type='pre-light' 
-            color='light' 
+            color='yellow' 
             text={'Услуги\nнашего парка'}
           />
           <Href 
